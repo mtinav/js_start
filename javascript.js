@@ -83,9 +83,10 @@ var mainList = new Object();
 
 	name: 'Имя магазина';
 	mainList.open = 'open';
-	budget: 'shopGoods';
+	open: true;
 
 
+var shopGoods = [];
 
 var employers = new Object();
 
