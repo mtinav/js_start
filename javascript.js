@@ -27,6 +27,7 @@ console.log(arr[0]);
 var answer = prompt('dfffff67?', '16');
 console.log(typeof(arr));
 
+
 // инкримент и дискремент ? одно равно означает что мы присвайваем
 var incr = 15,
 				decr = 10;
@@ -39,7 +40,7 @@ console.log(incr == 10)
 //три === днелает сравнение по типам данных 
 console.log("10" === 10);
 
-//
+
 var isChecked  = true;
 var isClose = true;
 //&& оператор 'и' выдаст правду только тогда когда два значния переменнных будет true
@@ -53,44 +54,24 @@ console.log(isChecked || !isClose); //false
 
 
 //дз
-// var budget = ['Ваш бюджет на месяц?', 'Название вашего магазина?' ];
-// alert(budget[0]);
-// alert(budget[1]);
+let money = prompt('Ваш бюджет на месяц?');
+let name = prompt('Название вашего магазина?');
 
-prompt('Ваш бюджет на месяц?');
-prompt('Название вашего магазина?');
-/*
-mainList = {
-	name: 'Имя магазина',
-	age: 'Бюджет',
 
+let mainList = {  //создали объект mainList который содежит данные 
+				budget: money, //бюджет
+				shopName: name, //имя магазина 
+				shopGoods: [],  //массив товаров shopGoods
+				employers: [], //объект с сотрудниками 
+				open: false  //свойство open
 }
-}
-console.log(mainList.name);
-console.log(mainList['age']);
 
-var shopGoods = ['plum', 'orange', 'apple'];
-console.log(shopGoods[0]);
-console.log(shopGoods[2]);
+//записать ответы в массив shopGoods
+mainList.shopGoods[0] = prompt("какой тип товара будем продовать?");
+mainList.shopGoods[1] = prompt("какой тип товара будем продовать?");
+mainList.shopGoods[2] = prompt("какой тип товара будем продовать?"); 
 
-employers = {
-	name: '',
-}
-console.log(employers.name);
-*/
+//Вывести на экран пользователя бюджет на 1 день (брать месяц за 30 дней)
+alert(mainList.budget / 30);
 
-var mainList = new Object();
-
-	name: 'Имя магазина';
-	mainList.open = 'open';
-	open: true;
-
-
-var shopGoods = [];
-
-var employers = new Object();
-
-
-
-
-
+console.log(mainList);
