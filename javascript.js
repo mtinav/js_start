@@ -73,5 +73,4 @@ mainList.shopGoods[2] = prompt("какой тип товара будем про
 
 //Вывести на экран пользователя бюджет на 1 день (брать месяц за 30 дней)
 alert(mainList.budget / 30);
-
 console.log(mainList);
