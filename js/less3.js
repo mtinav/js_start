@@ -79,7 +79,7 @@ function start() {
 };
 
 start();
-
+//-----------------------------
 let mainList = {
 	budget: money,
 	shopName: name,
