@@ -69,11 +69,18 @@ for(let i = 0; i < 8; i++) {
 }
 */
 //--------------
-/*
-let money = prompt('Ваш бюджет на месяц?');
-let name = prompt('Название вашего магазина?');
-let time = 19;
-*/
+
+let money,
+			 name,
+			 time
+
+function start() {
+	money = prompt('Ваш бюджет на месяц?');
+ name = prompt('Название вашего магазина?');
+	time = 21;
+}
+start();
+
 let mainList = {
 	shopName: name,
 	shopGoods: [],
@@ -81,27 +88,20 @@ let mainList = {
 } 
 
 //---------------------
-
 for (let i = 0; i < 3; i++) {
-	let a = prompt('Какой тип товара будем продавать?');
-	
-	let isEmpty = typeof(a) === null || a === ''; // Не пустой ответ
-	if (isEmpty) {
-		continue;
-	}
+	let a = prompt('Какой тип товаров будем продавать?');
 
-	let isString = typeof(a) === 'string'; // Ответ является строкой
-	let maxLengthAnswer = 50; // Максимальная длина строки ответа
-	let isAccessLength = isString ? a.length < maxLengthAnswer : false; // Если строка проверяем проверяем длину 
+	if(typeof(a) === 'string' && typeof(a) != null && a != '' && a.length < 50 ) {
+		console.log('verno');
+		mainList.shopGoods[i] = a;
+	} else {
+		i = i - i;
+	};
+};
+console.log(mainList.shopGoods);
+//----------------------
 
-	if (!isString || !isAccessLength) {
-		continue;
-	}
 
-	mainList.shopGoods.push(a);
-}
-
-console.log(mainList);
 /*
 var i = 0;
 do {
@@ -120,7 +120,7 @@ console.log(mainList);
 */
 
 //--------------
-
+/*
 if(time < 0) {
 	console.log('не бывает');
 } else if (time > 8 && time < 20) { 
@@ -131,7 +131,7 @@ if(time < 0) {
 	console.log('в сутках только 24 часа');
 };
 
-
+*/
 
 
 
