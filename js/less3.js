@@ -134,3 +134,33 @@ function done() {
 	console.log('я прошла 3 урок')
 }
 */
+
+
+
+function giveNameEmpoloyers() {
+	for (let i = 0; i < 4; i++) {
+		let nameEmployers = prompt('Имя вашего сотрудника?');
+		if(typeof(nameEmployers) === 'string' && typeof(nameEmployers) != null && nameEmployers != '' && nameEmployers != '' && nameEmployers.length < 50) {
+			console.log('good')
+			mainList.employers[i] = nameEmployers;
+		} else {
+			--i;
+		}
+	}
+};
+console.log('giveNameEmpoloyers');
+
+function budgetDay(x) {
+ alert("Бюджет на 1 день составляет " +  x / 30);
+ mainList.budget = x;
+}
+
+
+
+
+
+
+
+
+
+
